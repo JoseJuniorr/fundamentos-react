@@ -1,26 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+
+import Parametros from './components/Parametros'
+import Comfilhos from './components/Comfilhos'
+import Card from './layout/Card'
+import Repeticao from './components/Repeticao'
+import Condicional from './components/Condicional'
+
+const App = () => {
+    return (
+        <div className="app">
+            {/* <h1>React</h1>
+            <h2>Exemplo de Componente React</h2>
+            
+             */}
+
+            <Card title="Componente com params">
+                <Parametros title="Título React test" subtitle="Subtitulo React test" />
+
+            </Card>
+            <Card title="Com filhos">
+                <Comfilhos>
+                    <ul>
+                        <li>Ana</li>
+                        <li>Bia</li>
+                        <li>Carlos</li>
+                        <li>Daniel</li>
+                    </ul>
+                </Comfilhos>
+            </Card>
+            <Card title="children">
+                <Comfilhos>
+                    <ul>
+                        <li>Ana</li>
+                        <li>Bia</li>
+                        <li>Carlos</li>
+                        <li>Daniel</li>
+                    </ul>
+                </Comfilhos>
+            </Card>
+            <Card >
+                <Repeticao>
+
+                </Repeticao>
+            </Card>
+            <Card >
+                <Condicional numero={11}></Condicional>
+            </Card>
+        </div>
+
+
+
+    )
+
+
 }
 
-export default App;
+export default App
